@@ -127,3 +127,7 @@ EMAIL_HOST_PASSWORD = 'password2323'
 #one of the below should be used.
 EMAIL_USE_TLS = True
 
+try:
+    from .local_settings import *
+except ImportError:
+    print("Looks like no local file. You must be on production")
