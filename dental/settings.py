@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-z*zv^ua=$yfeu89+(lagq%y4gq2^7vahrkvabav*336*&$q6a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sidekicksdev01.pythonanywhere.com']
 
 # Application definition
 
@@ -117,12 +117,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
-EMAIL_HOST = 'smtp.google.com'
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'sidekicksdev01@gmail.com'
 EMAIL_HOST_PASSWORD = 'password2323'
 #one of the below should be used.
 EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
+
